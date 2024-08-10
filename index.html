@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Like App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="profile.jpg" alt="Profile Image" class="profile-pic">
+            <ul>
+                <li><a href="#" id="create-profile-link">Create Profile</a></li>
+                <li><a href="#" id="update-profile-link">Update Profile</a></li>
+                <li><a href="#" id="post-job-link">Post Job</a></li>
+                <li><a href="#" id="apply-job-link">Apply for Job</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1 id="form-title">Create Profile</h1>
+            <form id="interactionForm">
+                <div id="profile-fields">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="profession">Profession</label>
+                    <input type="text" id="profession" name="profession" placeholder="Enter your profession" required>
+
+                    <label for="skills">Skills (Comma-separated)</label>
+                    <input type="text" id="skills" name="skills" placeholder="Enter your skills" required>
+                </div>
+
+                <div id="job-fields" style="display: none;">
+                    <label for="title">Job Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter job title">
+
+                    <label for="description">Job Description</label>
+                    <textarea id="description" name="description" placeholder="Enter job description"></textarea>
+
+                    <label for="jobId">Job ID (for applying)</label>
+                    <input type="number" id="jobId" name="jobId" placeholder="Enter job ID to apply">
+                </div>
+
+                <button type="submit" id="submitButton">Create Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
